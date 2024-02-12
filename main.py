@@ -62,7 +62,7 @@ model.add(Dense(3, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(X_train, y_train, batch_size=32, epochs=40, validation_data=(X_val, y_val))
+model.fit(X_train, y_train, batch_size=32, epochs=150, validation_data=(X_val, y_val))
 
 # Evaluate the model on test data
 score = model.evaluate(X_test, to_categorical(test_df['Label']), verbose=0)
